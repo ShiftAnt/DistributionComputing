@@ -1,0 +1,21 @@
+mysqldump -u root \
+--databases bitnami_wordpress \
+--single-transaction \
+--compress \
+--order-by-primary \
+-pufVM0ttHbZqr | mysql -u admin \
+--port=3306 \
+--host=database-1.cpmvlqdxidqc.ap-northeast-2.rds.amazonaws.com \
+-poMqR6VRHsX7OfNvTWM2e
+
+
+mysql -u admin \
+--port=3306 \
+--host=database-1.cpmvlqdxidqc.ap-northeast-2.rds.amazonaws.com \
+-poMqR6VRHsX7OfNvTWM2e
+
+605b638449
+
+grant all privileges on 'bitnami_wordpress'.* to bn_wordpress identified by '605b638449' with grant option;
+
+grant all privileges on `bitnami_wordpress`.* to bn_wordpress identified by '605b638449' with grant option;
